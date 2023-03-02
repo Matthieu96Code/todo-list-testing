@@ -29,7 +29,7 @@
 
 # 📖 [to-do-list] <a name="about-project"></a>
 
-**to-do-list** is all about building simple To Do list app for adding and removing tasks from list using HTML, CSS, JavaScript and webpack.
+**to-do-list-testing** is about testing for functions add and remove for this App.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -121,6 +121,12 @@ You can deploy this project using: a GitHub Page
 - GitHub: [@Matthieu96Code](https://https://github.com/Matthieu96Code)
 - Twitter: [@MatthieuSENOU](https://https://twitter.com/MatthieuSenou)
 - LinkedIn: [Kodjo Matthieu SENOU](https://https://www.linkedin.com/in/kodjo-matthieu-senou-724a50210/)
+
+👤 **Author 2**
+   *Theophilus Doku*
+- GitHub: [@githubhandle](https://github.com/theodoku)
+- Twitter: [@twitterhandle](https://twitter.com/dok_theo)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/Theophilusdoku)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
