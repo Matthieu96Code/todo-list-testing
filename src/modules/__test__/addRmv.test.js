@@ -101,4 +101,15 @@ describe('action', () => {
   });
 
 
+  // test to clear all the task
+
+  test('if we clear all the task', () => {
+ 
+    clearAllChecked()
+
+    const myarray = getList()
+    expect(myarray.length).toBe(0);
+  });
+
+
 });
