@@ -9,7 +9,7 @@ const getList = () => {
     return [];
   }
   return JSON.parse(localStorage.getItem('taskListArray'));
-};
+} 
 
 // sort array function
 const sort = () => {
@@ -88,9 +88,9 @@ const deselect = () => {
 const add = (num1, num2) => num1 + num2;
 
 const domsuit = () => {
-  const doc = document.getElementById('task-input').value;
+  const doc = document.getElementById('task-input').value
   return doc;
-};
+}
 
 export {
   addTaskArray, removeTaskArray, save, getList, sort, editTask, delAppear, deselect, add, domsuit,

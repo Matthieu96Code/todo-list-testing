@@ -15,10 +15,6 @@
     
     "ignorePatterns": [
         "dist/",
-        "build/",
-        "__mock__",
-        "__setup__",
-        "__test__"
-
+        "build/"
       ]
 }

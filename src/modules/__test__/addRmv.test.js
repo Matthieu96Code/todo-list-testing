@@ -18,7 +18,7 @@ describe('action', () => {
     
       </ul>
     </section>`;
-
+  
   test('if a node list is added and show 1 element of li tag', () => {
     addTaskArray('learn code');
     expect(document.querySelectorAll('li')).toHaveLength(1);
@@ -46,5 +46,5 @@ describe('action', () => {
   test('if the store array became 1 element', () => {
     expect(getList()).toHaveLength(1);
   });
-  
+
 });
