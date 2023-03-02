@@ -88,5 +88,17 @@ describe('action', () => {
     expect(myarray[0].completed).toBeTruthy();
   });
 
+  
+  // test to checked the second task
+
+  test('if we checked a checkbox', () => {
+    const firstCheck = document.querySelectorAll('.list-check');
+    firstCheck[1].checked = true
+    checkedTask(firstCheck[1])
+
+    const myarray = getList()
+    expect(myarray[1].completed).toBeTruthy();
+  });
+
 
 });
