@@ -62,4 +62,15 @@ describe('action', () => {
     expect(getList()).toHaveLength(2);
   });
 
+  // test edit function
+
+  test('if we edit task', () => {
+    const editTaskLabel = document.getElementById('taskid1')
+    const newTaskValue = document.querySelectorAll('.replace-task')
+    newTaskValue[0].value = 'complete week tasks'
+    editTask(editTaskLabel)
+    const myarray = getList()
+    
+    expect(myarray[0].description).toBe('complete week tasks');
+  });
 });
