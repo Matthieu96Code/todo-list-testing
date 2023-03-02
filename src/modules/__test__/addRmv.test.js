@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { addTaskArray, getList, removeTaskArray } from '../actions';
+import { addTaskArray, editTask, getList, removeTaskArray } from '../actions';
 
 describe('action', () => {
   document.body.innerHTML = `<section id="task-section">
@@ -19,6 +19,8 @@ describe('action', () => {
       </ul>
     </section>`;
   
+    // Add a first task to list 
+
   test('if a node list is added and show 1 element of li tag', () => {
     addTaskArray('learn code');
     expect(document.querySelectorAll('li')).toHaveLength(1);
@@ -28,6 +30,8 @@ describe('action', () => {
     expect(getList()).toHaveLength(1);
   });
 
+    // Add a second task to list 
+
   test('if a node list is added and show 2 element of li tag', () => {
     addTaskArray('update github profil');
     expect(document.querySelectorAll('li')).toHaveLength(2);
@@ -36,6 +40,8 @@ describe('action', () => {
   test('if the store array is updated to 2 element', () => {
     expect(getList()).toHaveLength(2);
   });
+
+  // remove the second task from list 
 
   test('if a node list is removed and show 1 element of li tag', () => {
     const list1 = document.getElementById('list-1');
@@ -47,7 +53,7 @@ describe('action', () => {
     expect(getList()).toHaveLength(1);
   });
 
-  test('if a node list is added and show 1 element of li tag', () => {
+  test('if a node list is added and show 2 element of li tag', () => {
     addTaskArray('finish testing project');
     expect(document.querySelectorAll('li')).toHaveLength(2);
   });
@@ -55,4 +61,5 @@ describe('action', () => {
   test('if the store array is updated', () => {
     expect(getList()).toHaveLength(2);
   });
+
 });

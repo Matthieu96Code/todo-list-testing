@@ -15,9 +15,15 @@ const getList = () => {
 const sort = () => {
   const arrayT = getList();
   const list = document.querySelectorAll('li');
+  const taskLabel = document.querySelectorAll('label');
+  const taskInput = document.querySelectorAll('.replace-task');
+  const taskCheck = document.querySelectorAll('.list-check');
   arrayT.forEach((element, index) => {
     arrayT[index].index = index + 1;
     list[index].id = `list-${index + 1}`;
+    taskLabel[index].id = `taskid${index + 1}`;
+    taskInput[index].id = `taskelm-${index + 1}`;
+    taskCheck[index].id = `${index + 1}`;
     save(arrayT);
   });
 };
@@ -32,6 +38,7 @@ const addTaskArray = (taskInput) => {
     save(taskList);
     document.getElementById('task-input').value = '';
   }
+  sort();
 };
 
 // remove from array function

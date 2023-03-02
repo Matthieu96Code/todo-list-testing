@@ -4,9 +4,9 @@ export default (tasksElement) => {
   task.className = 'pm-border list-container';
   task.id = `list-${tasksElement.index}`;
   task.innerHTML = `
-    <input class="list-check" type="checkbox" id="${tasksElement.index}" name"task-${tasksElement.index}">
+    <input class="list-check" type="checkbox" id="check-${tasksElement.index}" name"task-${tasksElement.index}">
     <label class="icon-set" id="taskid${tasksElement.index}" for="task-${tasksElement.index}" >${tasksElement.description}
-    <input class="replace-task pm-font" value="${tasksElement.description}" type="text" name="tex-edit">
+    <input class="replace-task pm-font" value="${tasksElement.description}" type="text" name="tex-edit" id="taskelm-${tasksElement.index}">
       <a class="action-icon" href="#">
         <span class="material-symbols-outlined">
           more_vert
