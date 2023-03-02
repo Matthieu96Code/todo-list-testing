@@ -2,7 +2,8 @@
  * @jest-environment jsdom
  */
 
-import { addTaskArray, editTask, getList, removeTaskArray } from '../actions';
+import { addTaskArray, editTask, getList, removeTaskArray} from '../actions';
+import { checkedTask, clearAllChecked } from '../interact';
 
 describe('action', () => {
   document.body.innerHTML = `<section id="task-section">
@@ -41,7 +42,7 @@ describe('action', () => {
     expect(getList()).toHaveLength(2);
   });
 
-  // remove the second task from list 
+  // remove the first task from list 
 
   test('if a node list is removed and show 1 element of li tag', () => {
     const list1 = document.getElementById('list-1');
@@ -53,6 +54,8 @@ describe('action', () => {
     expect(getList()).toHaveLength(1);
   });
 
+  // Add and teset a second task to list 
+
   test('if a node list is added and show 2 element of li tag', () => {
     addTaskArray('finish testing project');
     expect(document.querySelectorAll('li')).toHaveLength(2);
@@ -62,7 +65,7 @@ describe('action', () => {
     expect(getList()).toHaveLength(2);
   });
 
-  // test edit function
+  // test of function / edit the first task 
 
   test('if we edit task', () => {
     const editTaskLabel = document.getElementById('taskid1')
@@ -73,4 +76,17 @@ describe('action', () => {
     
     expect(myarray[0].description).toBe('complete week tasks');
   });
+  
+  // test to checked the first task
+
+  test('if we checked a checkbox', () => {
+    const firstCheck = document.querySelectorAll('.list-check');
+    firstCheck[0].checked = true
+    checkedTask(firstCheck[0])
+
+    const myarray = getList()
+    expect(myarray[0].completed).toBeTruthy();
+  });
+
+
 });
