@@ -36,4 +36,10 @@ describe('action', () => {
     test('if the store array is updated to 2 element', () => {
       expect(getList()).toHaveLength(2);
     });
+  
+    test('if a node list is removed and show 1 element of li tag', () => {
+      const list1 = document.getElementById('list-1');
+      removeTaskArray(list1);
+      expect(document.querySelectorAll('li')).toHaveLength(1);
+    });
 });
