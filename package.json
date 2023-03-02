@@ -47,7 +47,6 @@
     "stylelint-scss": "^3.21.0",
     "webpack-dev-server": "^4.11.1"
   },
-
   "jest": {
     "testURL": "http://localhost/",
     "bail": true,
