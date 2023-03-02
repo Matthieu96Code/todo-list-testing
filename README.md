@@ -27,9 +27,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [to-do-list] <a name="about-project"></a>
+# 📖 [todo-list-testing] <a name="about-project"></a>
 
-**to-do-list-testing** is about testing for functions add and remove for this App.
+**todo-list-testing** is about testing for functions add and remove for this App.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -54,6 +54,7 @@
 - **Show an input form for add a task**
 - **Users can add and remove task**
 - **allow to checked task done and clear them**
+- **testing add and remove function**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -62,7 +63,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live link](https://matthieu96code.github.io/to-do-list/dist/)
+- [Live link](https://matthieu96code.github.io/todo-list-testing/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -81,11 +82,11 @@ In order to run this project you need:
 
 ### Setup
 
-Clone this repository to your desired folder: (https://github.com/Matthieu96Code/to-do-list)
+Clone this repository to your desired folder: (https://github.com/Matthieu96Code/todo-list-testing)
 
 ```sh
   cd my-folder
-  git clone https://github.com/Matthieu96Code/to-do-list
+  git clone https://github.com/Matthieu96Code/todo-list-testing
 ```
 
 ### Install
@@ -139,6 +140,7 @@ You can deploy this project using: a GitHub Page
 - [ ] **add a beautiful design**
 - [ ] **professional animations and transitions**
 - [ ] **Add more visitors interaction**
+- [ ] **Add more test**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -149,7 +151,7 @@ You can deploy this project using: a GitHub Page
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Matthieu96Code/to-do-list/issues)
+Feel free to check the [issues page](https://github.com/Matthieu96Code/todo-list-testing/issues)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
