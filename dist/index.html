@@ -8,33 +8,29 @@
     <title>To Do list</title>
 <script defer src="main.js"></script></head>
 <body>
-    <main class="pm-font" id="todo-list-content">
-        <header id="title">
-            <h1 class="pm-font pm-border icon-set" id="title-h1">
-                Today's To Do
-            </h1>
-            <a class="action-icon" id="refresh-icon" href="#">
+    <section class="pm-font" id="todo-list-content">
+        <h1 class="pm-font pm-border icon-set">
+            Today's To Do
+            <a class="action-icon" href="#">
                 <span class="material-symbols-outlined">
                     sync
                 </span>
             </a>
-        </header >
-        <section id="task-section">
-            <form class="pm-font icon-set" id="task-form" action="">
-                <input class="pm-border" type="text" name="task" id="task-input" placeholder="Add to your list...">
-                <a class="action-icon" id="add-btn" href="#">
-                    <span class="material-symbols-outlined">
-                        subdirectory_arrow_left
-                    </span>
-                </a>
-            </form>
-            <ul class="pm-font" id="task-list">
-            
-            </ul>
-        </section>
-        <button type="button" class="pm-font" id="clear-task">
+        </h1>
+        <form class="pm-font icon-set" id="task-form" action="">
+            <input class="pm-border" type="text" name="task" id="task-input" placeholder="Add to your list...">
+            <a class="action-icon" id="add-btn" href="#">
+                <span class="material-symbols-outlined">
+                    subdirectory_arrow_left
+                </span>
+            </a>
+        </form>
+        <ul class="pm-font" id="task-list">
+        
+        </ul>
+        <button class="pm-font" id="clear-task">
             Clear all complete
         </button>
-    </main>
+    </section>
 </body>
 </html>
