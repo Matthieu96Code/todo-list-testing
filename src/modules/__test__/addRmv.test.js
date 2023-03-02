@@ -47,4 +47,12 @@ describe('action', () => {
     expect(getList()).toHaveLength(1);
   });
 
+  test('if a node list is added and show 1 element of li tag', () => {
+    addTaskArray('finish testing project');
+    expect(document.querySelectorAll('li')).toHaveLength(2);
+  });
+
+  test('if the store array is updated', () => {
+    expect(getList()).toHaveLength(2);
+  });
 });
