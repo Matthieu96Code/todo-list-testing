@@ -2,8 +2,6 @@ import {
   getList, save,
 } from './actions';
 
-// update completed status function
-
 const checkedTask = (check) => {
   const taskListArray = getList();
   const labelText = check.parentElement.children[1].children[0];
@@ -21,8 +19,6 @@ const checkedTask = (check) => {
     save(taskListArray);
   }
 };
-
-// clear all function
 
 const clearAllChecked = () => {
   let taskListArray = getList();

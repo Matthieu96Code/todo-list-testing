@@ -1,8 +1,5 @@
-/* eslint-disable no-param-reassign */
-
 import populate from './injectHtml';
 
-// Save and get list function
 const save = (taskList) => localStorage.setItem('taskListArray', JSON.stringify(taskList));
 const getList = () => {
   if (JSON.parse(localStorage.getItem('taskListArray')) === null) {
@@ -11,18 +8,21 @@ const getList = () => {
   return JSON.parse(localStorage.getItem('taskListArray'));
 };
 
-// sort array function
 const sort = () => {
   const arrayT = getList();
   const list = document.querySelectorAll('li');
+  const taskLabel = document.querySelectorAll('label');
+  const taskInput = document.querySelectorAll('.replace-task');
+  const taskCheck = document.querySelectorAll('.list-check');
   arrayT.forEach((element, index) => {
     arrayT[index].index = index + 1;
     list[index].id = `list-${index + 1}`;
+    taskLabel[index].id = `taskid${index + 1}`;
+    taskInput[index].id = `taskelm-${index + 1}`;
+    taskCheck[index].id = `${index + 1}`;
     save(arrayT);
   });
 };
-
-// add to array function
 
 const addTaskArray = (taskInput) => {
   const taskList = getList();
@@ -32,9 +32,8 @@ const addTaskArray = (taskInput) => {
     save(taskList);
     document.getElementById('task-input').value = '';
   }
+  sort();
 };
-
-// remove from array function
 
 const removeTaskArray = (element) => {
   if (element.classList.contains('list-container')) {
@@ -50,8 +49,6 @@ const removeTaskArray = (element) => {
   }
 };
 
-// edit in array function
-
 const editTask = (elem) => {
   let array = getList();
   const list = document.querySelectorAll('.replace-task');
@@ -65,23 +62,21 @@ const editTask = (elem) => {
   });
 };
 
-// add interaction to field function
-
 const delAppear = (element) => {
-  element.children[0].style.backgroundColor = 'beige';
-  element.parentElement.style.backgroundColor = 'beige';
-  element.style.backgroundColor = 'beige';
-  element.children[1].children[0].textContent = 'delete';
+  const reset = element;
+  reset.children[0].style.backgroundColor = 'beige';
+  reset.parentElement.style.backgroundColor = 'beige';
+  reset.style.backgroundColor = 'beige';
+  reset.children[1].children[0].textContent = 'delete';
 };
-
-// remove interaction to field function
 
 const deselect = () => {
   document.querySelectorAll('label').forEach((child1) => {
-    child1.style.backgroundColor = 'white';
-    child1.children[0].style.backgroundColor = 'white';
-    child1.parentElement.style.backgroundColor = 'white';
-    child1.children[1].children[0].textContent = 'more_vert';
+    const toggle = child1;
+    toggle.style.backgroundColor = 'white';
+    toggle.children[0].style.backgroundColor = 'white';
+    toggle.parentElement.style.backgroundColor = 'white';
+    toggle.children[1].children[0].textContent = 'more_vert';
   });
 };
 
