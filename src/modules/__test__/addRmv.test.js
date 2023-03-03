@@ -20,8 +20,6 @@ describe('action', () => {
       </ul>
     </section>`;
   
-    // Add a first task to list 
-
   test('if a node list is added and show 1 element of li tag', () => {
     addTaskArray('learn code');
     expect(document.querySelectorAll('li')).toHaveLength(1);
@@ -31,8 +29,6 @@ describe('action', () => {
     expect(getList()).toHaveLength(1);
   });
 
-    // Add a second task to list 
-
   test('if a node list is added and show 2 element of li tag', () => {
     addTaskArray('update github profil');
     expect(document.querySelectorAll('li')).toHaveLength(2);
@@ -41,8 +37,6 @@ describe('action', () => {
   test('if the store array is updated to 2 element', () => {
     expect(getList()).toHaveLength(2);
   });
-
-  // remove the first task from list 
 
   test('if a node list is removed and show 1 element of li tag', () => {
     const list1 = document.getElementById('list-1');
@@ -54,8 +48,6 @@ describe('action', () => {
     expect(getList()).toHaveLength(1);
   });
 
-  // Add and teset a second task to list 
-
   test('if a node list is added and show 2 element of li tag', () => {
     addTaskArray('finish testing project');
     expect(document.querySelectorAll('li')).toHaveLength(2);
@@ -64,8 +56,6 @@ describe('action', () => {
   test('if the store array is updated', () => {
     expect(getList()).toHaveLength(2);
   });
-
-  // test of function / edit the first task 
 
   test('if we edit task', () => {
     const editTaskLabel = document.getElementById('taskid1')
@@ -77,8 +67,6 @@ describe('action', () => {
     expect(myarray[0].description).toBe('complete week tasks');
   });
   
-  // test to checked the first task
-
   test('if we checked a checkbox', () => {
     const firstCheck = document.querySelectorAll('.list-check');
     firstCheck[0].checked = true
@@ -87,9 +75,6 @@ describe('action', () => {
     const myarray = getList()
     expect(myarray[0].completed).toBeTruthy();
   });
-
-  
-  // test to checked the second task
 
   test('if we checked a checkbox', () => {
     const firstCheck = document.querySelectorAll('.list-check');
@@ -100,9 +85,6 @@ describe('action', () => {
     expect(myarray[1].completed).toBeTruthy();
   });
 
-
-  // test to clear all the task
-
   test('if we clear all the task', () => {
  
     clearAllChecked()
@@ -110,6 +92,5 @@ describe('action', () => {
     const myarray = getList()
     expect(myarray.length).toBe(0);
   });
-
 
 });
